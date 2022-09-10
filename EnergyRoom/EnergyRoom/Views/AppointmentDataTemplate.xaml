@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AbsoluteLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnergyRoom.Views.AppointmentDataTemplate"
+             xmlns:local="clr-namespace:EnergyRoom.ViewModels"
+             Margin="0" 
+             Padding="0"
+             BackgroundColor="White">
+
+    <StackLayout Padding="1" BackgroundColor="{Binding Color}" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+        <StackLayout BackgroundColor="{Binding Color}" HorizontalOptions="FillAndExpand">
+            <Label FontFamily="{StaticResource Montserrat-Regular}" FontSize="10" Text="{Binding EventTitle}" TextColor="#fefefe" HorizontalTextAlignment="Start"/>
+        </StackLayout>
+    </StackLayout>
+
+    <Image AbsoluteLayout.LayoutBounds="0.1, 0.85, 0.5, 0.5"
+           AbsoluteLayout.LayoutFlags="All"
+           BackgroundColor="Transparent"
+           Source="{Binding EventIcon}" Aspect="AspectFit" />
+
+    <Image AbsoluteLayout.LayoutBounds="1, 0, 12, 12" IsVisible="{Binding IsBooked}"
+           AbsoluteLayout.LayoutFlags="PositionProportional"
+           BackgroundColor="Transparent"
+           Source="tick.png" Aspect="AspectFit" />
+
+    <Grid AbsoluteLayout.LayoutBounds="1, 1, 0.2, 0.4" IsVisible="{Binding IsAdmin, Source={RelativeSource AncestorType={x:Type local:BaseViewModel}}}"
+          AbsoluteLayout.LayoutFlags="All">
+        <Label Text="{Binding EventCount}"
+               BackgroundColor="Transparent"
+               TextColor="White" />
+    </Grid>
+</AbsoluteLayout>

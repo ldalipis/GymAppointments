@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutText" xml:space="preserve">
+    <value>Σχετικά</value>
+  </data>
+  <data name="AccountText" xml:space="preserve">
+    <value>Λογαριασμός</value>
+  </data>
+  <data name="AddNewEventText" xml:space="preserve">
+    <value>Προσθήκη Προπόνησης</value>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>Πρόσθεσε</value>
+  </data>
+  <data name="AtText" xml:space="preserve">
+    <value>στις</value>
+  </data>
+  <data name="BookText" xml:space="preserve">
+    <value>Συμμετοχή</value>
+  </data>
+  <data name="CameraText" xml:space="preserve">
+    <value>Κάμερα</value>
+  </data>
+  <data name="CancelText" xml:space="preserve">
+    <value>Κλείσιμο</value>
+  </data>
+  <data name="ChangeEmailAcceptedDescr" xml:space="preserve">
+    <value>Το e-mail σου έχει αλλάξει. Παρακλαούμε συνδέσου ξανά με το νέο e-mail.</value>
+  </data>
+  <data name="ChangeEmailAcceptedTitle" xml:space="preserve">
+    <value>Αλλαγή e-mail επιτυχής.</value>
+  </data>
+  <data name="ChangeEmailRequestSentDescr" xml:space="preserve">
+    <value>Ένα e-mail στη νέα διεύθυνση έχει σταλεί. Για να επιβεβαιωθεί η αλλαγή, θα πρέπει να ακολουθίσεις το σύνδεσμο που θα βρεις στο αυτό το e-mail.</value>
+  </data>
+  <data name="ChangeEmailRequestSentTitle" xml:space="preserve">
+    <value>Το e-mail στάλθηκε</value>
+  </data>
+  <data name="ChangeEmailText" xml:space="preserve">
+    <value>Αλλαγή e-mail</value>
+  </data>
+  <data name="ChangePhoneText" xml:space="preserve">
+    <value>Αλλαγή αριθμού τηλεφώνου</value>
+  </data>
+  <data name="ChangePhotoDescrText" xml:space="preserve">
+    <value>Επίλεξε φωτογραφία από τη συλλογή ή βγάλε νέα από την κάμερα.</value>
+  </data>
+  <data name="ChangePhotoTitleText" xml:space="preserve">
+    <value>Αλλαγή φωτογραφίας</value>
+  </data>
+  <data name="ChangeText" xml:space="preserve">
+    <value>Αλλαγή</value>
+  </data>
+  <data name="CollectionText" xml:space="preserve">
+    <value>Συλλογή</value>
+  </data>
+  <data name="ConfirmPasswordText" xml:space="preserve">
+    <value>Επιβεβαίωση κωδικού</value>
+  </data>
+  <data name="CreateAccountText" xml:space="preserve">
+    <value>Δημιούργησε λογαριασμό για να ξεκινήσεις</value>
+  </data>
+  <data name="DateText" xml:space="preserve">
+    <value>Ημερ/νία</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>Διαγραφή</value>
+  </data>
+  <data name="DisconnectedText" xml:space="preserve">
+    <value>Έχεις αποσυνδεθεί. Παρακαλούμε κάνε νέα σύνδεση.</value>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>Επεξεργασία</value>
+  </data>
+  <data name="EmailInUseDescr" xml:space="preserve">
+    <value>Το email αυτό ανήκει ήδη σε κάποιον χρήστη. Χρησιμοποίησε ένα διαφορετικό email.</value>
+  </data>
+  <data name="EmailInUseTitle" xml:space="preserve">
+    <value>Το email αυτό είναι ήδη σε χρήση</value>
+  </data>
+  <data name="EndTimeText" xml:space="preserve">
+    <value>Ώρα Λήξης</value>
+  </data>
+  <data name="EventInfoText" xml:space="preserve">
+    <value>Πληροφορίες</value>
+  </data>
+  <data name="EventsList" xml:space="preserve">
+    <value>Συμμετοχές</value>
+  </data>
+  <data name="FBLogin" xml:space="preserve">
+    <value>Είσοδος με Facebook</value>
+  </data>
+  <data name="FBLoginText" xml:space="preserve">
+    <value>Είσοδος με Facebook</value>
+  </data>
+  <data name="ForgotPasswordDescr" xml:space="preserve">
+    <value>Γράψε το e-mail ή το ψευδόνυμό σου για να ξεκινήσεις.</value>
+  </data>
+  <data name="ForgotPasswordRun" xml:space="preserve">
+    <value>Λάβαμε το αίτημά σου. Αν αυτό που συμπλήρωσες υπάρχει στο σύστημα θα λάβεις ενα e-mail με οδηγίες για να δημιουργήσεις νέο κωδικό.</value>
+  </data>
+  <data name="ForgotPasswordText" xml:space="preserve">
+    <value>Ξέχασα τον κωδικό</value>
+  </data>
+  <data name="GymnastText" xml:space="preserve">
+    <value>Γυμναστής</value>
+  </data>
+  <data name="LOGIN" xml:space="preserve">
+    <value>ΕΙΣΟΔΟΣ</value>
+  </data>
+  <data name="LogInDescr" xml:space="preserve">
+    <value>Ας πιάσουμε δουλειά</value>
+  </data>
+  <data name="LoginQuestion" xml:space="preserve">
+    <value>Έχεις ήδη λογαριασμό;</value>
+  </data>
+  <data name="LogInText" xml:space="preserve">
+    <value>Είσοδος</value>
+  </data>
+  <data name="LogOutText" xml:space="preserve">
+    <value>Έξοδος</value>
+  </data>
+  <data name="NameText" xml:space="preserve">
+    <value>Όνομα</value>
+  </data>
+  <data name="NewEventText" xml:space="preserve">
+    <value>Νέα Προπόνηση!</value>
+  </data>
+  <data name="NewPictureText" xml:space="preserve">
+    <value>Νέα Φωτογραφία</value>
+  </data>
+  <data name="NoBookingsOnEventText" xml:space="preserve">
+    <value>Κανείς δεν έχει δηλώσει συμμετοχή ακόμα</value>
+  </data>
+  <data name="NotificeText" xml:space="preserve">
+    <value>Ειδοποίηση</value>
+  </data>
+  <data name="PasswordsDoNotMatchDescr" xml:space="preserve">
+    <value>Οι κωδικοί στα πεδία πρέπει να είναι ίδιοι.</value>
+  </data>
+  <data name="PasswordsDoNotMatchTitle" xml:space="preserve">
+    <value>Οι κωδικοί δεν ταιριάζουν</value>
+  </data>
+  <data name="PasswordText" xml:space="preserve">
+    <value>Κωδικός</value>
+  </data>
+  <data name="PhoneChangeSuccessfulText" xml:space="preserve">
+    <value>Ο αριθμός τηλεφώνου άλλαξε.</value>
+  </data>
+  <data name="PhoneText" xml:space="preserve">
+    <value>Τηλέφωνο</value>
+  </data>
+  <data name="ProfileText" xml:space="preserve">
+    <value>Προφίλ</value>
+  </data>
+  <data name="RecordVoicePrivacy" xml:space="preserve">
+    <value>Αυτή η εφαρμογή χρησιμοποιεί αναγνώριση φωνής για φωνητικές εντολές και χρησιμοποιεί το Διαδίκτυο για την αποστολή δεδομένων πίσω στον πάροχο της υπηρεσίας αναγνώρισης φωνής. Με αυτόν τον τρόπο, εταιρείες όπως η Google και η Microsoft λαμβάνουν δεδομένα για την ερμηνεία των εντολών σας. Αυτές οι εταιρείες μπορούν να αποθηκεύουν δεδομένα που λαμβάνονται για να διευκολύνουν τη βελτίωση των υπηρεσιών αναγνώρισης φωνής. Δεν αποθηκεύουμε, ακούμε ή χρησιμοποιούμε τα δείγματα φωνής σας με κανέναν τρόπο.</value>
+  </data>
+  <data name="REGISTER" xml:space="preserve">
+    <value>ΕΓΓΡΑΦΗ</value>
+  </data>
+  <data name="ScheduleText" xml:space="preserve">
+    <value>Πρόγραμμα</value>
+  </data>
+  <data name="SelectPictureText" xml:space="preserve">
+    <value>Επιλογή Φωτογραφίας</value>
+  </data>
+  <data name="SignUpQuestion" xml:space="preserve">
+    <value>Δεν έχεις λογαριασμό;</value>
+  </data>
+  <data name="SignUpText" xml:space="preserve">
+    <value>Εγγραφή</value>
+  </data>
+  <data name="SocialDescr" xml:space="preserve">
+    <value>Ή συνδέσου μέσω social media</value>
+  </data>
+  <data name="StartTimeText" xml:space="preserve">
+    <value>Ώρα Έναρξης</value>
+  </data>
+  <data name="SubmitText" xml:space="preserve">
+    <value>Υποβολή</value>
+  </data>
+  <data name="TimeText" xml:space="preserve">
+    <value>Ώρα</value>
+  </data>
+  <data name="TrainerIsText" xml:space="preserve">
+    <value>Προπόνηση από</value>
+  </data>
+  <data name="TypeText" xml:space="preserve">
+    <value>Προπόνηση</value>
+  </data>
+  <data name="UploadedText" xml:space="preserve">
+    <value>Ανέβηκε</value>
+  </data>
+  <data name="UploadSuccessfulText" xml:space="preserve">
+    <value>Η φωτογραφία ανέβηκε!</value>
+  </data>
+  <data name="UploadText" xml:space="preserve">
+    <value>Ανέβασμα</value>
+  </data>
+  <data name="UserCanTakePlaceInEventText" xml:space="preserve">
+    <value>Μπορείς να δηλώσεις συμμετοχή</value>
+  </data>
+  <data name="UserHasBookedEventText" xml:space="preserve">
+    <value>Έχεις δηλώσει συμμετοχή</value>
+  </data>
+  <data name="UsernameInUseDescr" xml:space="preserve">
+    <value>Το ψευδώνυμο αυτό ανήκει ήδη σε κάποιον χρήστη. Χρησιμοποίησε ένα διαφορετικό ψευδώνυμο.</value>
+  </data>
+  <data name="UsernameInUseTitle" xml:space="preserve">
+    <value>Το ψευδώνυμο αυτό είναι ήδη σε χρήση</value>
+  </data>
+  <data name="UsernameText" xml:space="preserve">
+    <value>Ψευδώνυμο</value>
+  </data>
+  <data name="UserNotFoundDescr" xml:space="preserve">
+    <value>Το όνομα χρήστη ή/και ο κωδικός είναι λάθος</value>
+  </data>
+  <data name="UserNotFoundTitle" xml:space="preserve">
+    <value>Λάθος στοιχεία</value>
+  </data>
+  <data name="UsersThatHaveBookedText" xml:space="preserve">
+    <value>Οι παρακάτω χρήστες έχουν δηλώσει συμμετοχή</value>
+  </data>
+  <data name="ValidEmailText" xml:space="preserve">
+    <value>Πληκτρολόγησε σωστό e-mail</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Έκδοση</value>
+  </data>
+  <data name="WeekText" xml:space="preserve">
+    <value>Εβδομάδα</value>
+  </data>
+  <data name="WithdrawText" xml:space="preserve">
+    <value>Αφαίρεση</value>
+  </data>
+</root>

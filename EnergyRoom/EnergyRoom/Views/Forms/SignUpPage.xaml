@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="EnergyRoom.Views.Forms.SignUpPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:control="clr-namespace:EnergyRoom.Controls"
+    xmlns:converter="clr-namespace:EnergyRoom.Converters"
+    xmlns:core="clr-namespace:Syncfusion.XForms.Core;assembly=Syncfusion.Core.XForms"
+    xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+    xmlns:local="clr-namespace:EnergyRoom.Views.Forms"
+    xmlns:viewModel="clr-namespace:EnergyRoom.ViewModels.Forms"
+    Title="{x:Static resources:AppResources.SignUpText}"
+    BackgroundImageSource="{core:OnPlatformOrientationStringValue Default=LoginBackground.png}"
+    NavigationPage.HasNavigationBar="False"
+    xmlns:resources="clr-namespace:EnergyRoom.Resources"
+    Style="{StaticResource ContentPageStyle}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:BooleanToColorConverter x:Key="ColorConverter" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <!--  Binding context for sign-up page  -->
+    <ContentPage.BindingContext>
+        <viewModel:SignUpPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <Grid>
+            <gradient:SfGradientView Style="{StaticResource SfGradientViewStyle}" />
+
+            <ScrollView HorizontalOptions="Center">
+                <ScrollView.VerticalOptions>
+                    <OnIdiom
+                        x:TypeArguments="LayoutOptions"
+                        Default="CenterAndExpand"
+                        Phone="FillAndExpand" />
+                </ScrollView.VerticalOptions>
+
+                <StackLayout
+                    Margin="{core:OnPlatformOrientationThickness PhonePortrait='20,32',
+                                                                 PhoneLandscape='150,32',
+                                                                 TabletPortrait='200,50',
+                                                                 TabletLandscape='300,50',
+                                                                 Desktop='30'}"
+                    Spacing="0"
+                    VerticalOptions="FillAndExpand"
+                    WidthRequest="{OnPlatform Default='-1',
+                                              UWP='350'}">
+                    <StackLayout
+                        HorizontalOptions="Center"
+                        Spacing="24"
+                        VerticalOptions="CenterAndExpand">
+
+                        <Image Source="logo.png" Margin="10" />
+
+                        <!--  Label to display the title of this page  -->
+                        <Label
+                            Margin="0,-30,0,8"
+                            FontFamily="{StaticResource Montserrat-SemiBold}"
+                            FontSize="20"
+                            HorizontalOptions="Center"
+                            Style="{StaticResource LabelStyle}"
+                            Text="{x:Static resources:AppResources.SignUpText}" />
+
+                        <!--  Label to display the description of this page  -->
+                        <Label
+                            Margin="0,-16,0,8"
+                            FontFamily="{StaticResource Montserrat-Medium}"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource LabelStyle}"
+                            Text="{x:Static resources:AppResources.CreateAccountText}" />
+
+                        <!--  Entry to get username from user  -->
+                        <border:SfBorder BorderColor="{Binding Source={x:Reference UsernameEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=0}" Style="{StaticResource SfBorderStyle}">
+                            <control:BorderlessEntry
+                                x:Name="UsernameEntry"
+                                Placeholder="{x:Static resources:AppResources.UsernameText}"
+                                Style="{StaticResource EntryStyle}"
+                                Text="{Binding Username}" />
+                        </border:SfBorder>
+
+                        <!--  Entry to get full name from user  -->
+                        <border:SfBorder BorderColor="{Binding Source={x:Reference NameEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=0}" Style="{StaticResource SfBorderStyle}">
+                            <control:BorderlessEntry
+                                x:Name="NameEntry"
+                                Placeholder="{x:Static resources:AppResources.NameText}"
+                                Style="{StaticResource EntryStyle}"
+                                Text="{Binding Name}" />
+                        </border:SfBorder>
+
+                        <!--  Entry to get phone from user  -->
+                        <border:SfBorder BorderColor="{Binding Source={x:Reference PhoneEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=0}" Style="{StaticResource SfBorderStyle}">
+                            <control:BorderlessEntry
+                                Keyboard="Numeric"
+                                x:Name="PhoneEntry"
+                                Placeholder="{x:Static resources:AppResources.PhoneText}"
+                                Style="{StaticResource EntryStyle}"
+                                Text="{Binding Phone}" />
+                        </border:SfBorder>
+
+                        <!--  Entry to get email ID from user  -->
+                        <local:EmailEntry />
+
+                        <!--  Entry to get password from user  -->
+                        <border:SfBorder BorderColor="{Binding Source={x:Reference PasswordEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=0}" Style="{StaticResource SfBorderStyle}">
+                            <control:BorderlessEntry
+                                x:Name="PasswordEntry"
+                                IsPassword="true"
+                                Placeholder="{x:Static resources:AppResources.PasswordText}"
+                                Style="{StaticResource EntryStyle}"
+                                Text="{Binding Password}" />
+                        </border:SfBorder>
+
+                        <!--  Entry to get the confirm password from user  -->
+                        <border:SfBorder BorderColor="{Binding Source={x:Reference ConfirmPasswordEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=0}" Style="{StaticResource SfBorderStyle}">
+                            <control:BorderlessEntry
+                                x:Name="ConfirmPasswordEntry"
+                                IsPassword="true"
+                                Placeholder="{x:Static resources:AppResources.ConfirmPasswordText}"
+                                Style="{StaticResource EntryStyle}"
+                                Text="{Binding ConfirmPassword}" />
+                        </border:SfBorder>
+
+                        <!--  Sign-up button  -->
+                        <buttons:SfButton
+                            Command="{Binding SignUpCommand}"
+                            CornerRadius="20"
+                            FontFamily="{StaticResource Montserrat-SemiBold}"
+                            Style="{StaticResource SfButtonStyle}"
+                            Text="{x:Static resources:AppResources.REGISTER}" />
+                    </StackLayout>
+
+                    <StackLayout
+                        HorizontalOptions="Center"
+                        Orientation="Horizontal"
+                        Spacing="1"
+                        VerticalOptions="End">
+
+                        <StackLayout.Padding>
+                            <OnIdiom
+                                x:DataType="Thickness"
+                                Default="0, 48, 0, 0"
+                                Phone="0" />
+                        </StackLayout.Padding>
+
+                        <Label
+                            FontFamily="{StaticResource Montserrat-Medium}"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource LabelStyle}"
+                            Text="{x:Static resources:AppResources.LoginQuestion}"
+                            VerticalTextAlignment="Center" />
+
+                        <buttons:SfButton
+                            Command="{Binding LoginCommand}"
+                            CornerRadius="4"
+                            Style="{StaticResource SfFlatButtonStyle}"
+                            Text="{x:Static resources:AppResources.LogInText}" />
+
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

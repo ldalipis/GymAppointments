@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       mc:Ignorable="d"
+       xmlns:local="clr-namespace:EnergyRoom.Views"
+       xmlns:localforms="clr-namespace:EnergyRoom.Views.Forms"
+       xmlns:localprofile="clr-namespace:EnergyRoom.Views.Profile"
+       Title="EnergyRoom"
+       x:Class="EnergyRoom.AppShell"
+       xmlns:resources="clr-namespace:EnergyRoom.Resources"
+       FlyoutBehavior="Disabled">
+
+    <!-- Styles and Resources -->
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <!-- Loading/Start Page -->
+    <ShellItem Route="loading">
+        <ShellContent ContentTemplate="{DataTemplate local:LoadingPage}" />
+    </ShellItem>
+
+    <!-- Login and Registration Page -->
+    <ShellContent Route="login" ContentTemplate="{DataTemplate localforms:LoginPage}" />
+    <ShellContent Route="registration" ContentTemplate="{DataTemplate localforms:SignUpPage}" />
+
+    <!-- Main Page -->
+    <TabBar>
+        <ShellContent Title="{x:Static resources:AppResources.WeekText}" Icon="tab_calendar.png" Route="main" ContentTemplate="{DataTemplate local:WeekViewPage}" />
+        <ShellContent Title="{x:Static resources:AppResources.EventsList}" Icon="tab_feed.png" Route="events" ContentTemplate="{DataTemplate local:EventsListPage}" />
+        <ShellContent Title="{x:Static resources:AppResources.ProfileText}" Icon="avatar.png" Route="profile" ContentTemplate="{DataTemplate localprofile:ProfilePage}" />
+        <ShellContent Title="{x:Static resources:AppResources.AboutText}" Icon="tab_about.png" Route="about" ContentTemplate="{DataTemplate local:AboutPage}" />
+    </TabBar>
+
+    <!--<FlyoutItem Route="main"
+                FlyoutDisplayOptions="AsMultipleItems" IsTabStop="False">
+        <ShellContent Route="home"
+                      IsTabStop="False"
+                      ContentTemplate="{DataTemplate local:WeekViewPage}"
+                      Title="Home" />
+    </FlyoutItem>-->
+
+    <!--<MenuItem Text="Logout" Command="{Binding ExecuteLogout}" />-->
+</Shell>

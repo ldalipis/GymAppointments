@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutText" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AccountText" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="AddNewEventText" xml:space="preserve">
+    <value>Add New Event</value>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AtText" xml:space="preserve">
+    <value>At</value>
+  </data>
+  <data name="BookText" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="CameraText" xml:space="preserve">
+    <value>Camera</value>
+  </data>
+  <data name="CancelText" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ChangeEmailAcceptedDescr" xml:space="preserve">
+    <value>Your e-mail has been successully changed. Please log in again with the new e-mail.</value>
+  </data>
+  <data name="ChangeEmailAcceptedTitle" xml:space="preserve">
+    <value>E-mail change success.</value>
+  </data>
+  <data name="ChangeEmailRequestSentDescr" xml:space="preserve">
+    <value>An e-mail to the specified new account has been sent. You have to accept the change by clicking the link provided in that e-mail.</value>
+  </data>
+  <data name="ChangeEmailRequestSentTitle" xml:space="preserve">
+    <value>An e-mail has been sent</value>
+  </data>
+  <data name="ChangeEmailText" xml:space="preserve">
+    <value>Change e-mail</value>
+  </data>
+  <data name="ChangePhoneText" xml:space="preserve">
+    <value>Change phone number</value>
+  </data>
+  <data name="ChangePhotoDescrText" xml:space="preserve">
+    <value>Select photo from collection or take a new one with the camera.</value>
+  </data>
+  <data name="ChangePhotoTitleText" xml:space="preserve">
+    <value>Change Photo</value>
+  </data>
+  <data name="ChangeText" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="CollectionText" xml:space="preserve">
+    <value>Collection</value>
+  </data>
+  <data name="ConfirmPasswordText" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="CreateAccountText" xml:space="preserve">
+    <value>Create an account to start doing more</value>
+  </data>
+  <data name="DateText" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DisconnectedText" xml:space="preserve">
+    <value>You have been disconnected. Please log in again.</value>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EmailInUseDescr" xml:space="preserve">
+    <value>The email you have selected is already in use. Please another email.</value>
+  </data>
+  <data name="EmailInUseTitle" xml:space="preserve">
+    <value>Email is in use</value>
+  </data>
+  <data name="EndTimeText" xml:space="preserve">
+    <value>End Time</value>
+  </data>
+  <data name="EventInfoText" xml:space="preserve">
+    <value>Event Info</value>
+  </data>
+  <data name="EventsList" xml:space="preserve">
+    <value>My Events</value>
+  </data>
+  <data name="FBLogin" xml:space="preserve">
+    <value>Login with Facebook</value>
+  </data>
+  <data name="FBLoginText" xml:space="preserve">
+    <value>Login with Facebook</value>
+  </data>
+  <data name="ForgotPasswordDescr" xml:space="preserve">
+    <value>Enter you email or your username to begin.</value>
+  </data>
+  <data name="ForgotPasswordRun" xml:space="preserve">
+    <value>Request received. If what you provided exists on our system you will receive an e-mail with instructions how to reset your password.</value>
+  </data>
+  <data name="ForgotPasswordText" xml:space="preserve">
+    <value>Forgot my password</value>
+  </data>
+  <data name="GymnastText" xml:space="preserve">
+    <value>Gymnast</value>
+  </data>
+  <data name="LOGIN" xml:space="preserve">
+    <value>LOG IN</value>
+  </data>
+  <data name="LogInDescr" xml:space="preserve">
+    <value>Let's get to work</value>
+  </data>
+  <data name="LoginQuestion" xml:space="preserve">
+    <value>Already have an account?</value>
+  </data>
+  <data name="LogInText" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="LogOutText" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="NameText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NewEventText" xml:space="preserve">
+    <value>New Event!</value>
+  </data>
+  <data name="NewPictureText" xml:space="preserve">
+    <value>New Picture</value>
+  </data>
+  <data name="NoBookingsOnEventText" xml:space="preserve">
+    <value>No one has booked this event yet</value>
+  </data>
+  <data name="NotificeText" xml:space="preserve">
+    <value>Notifice</value>
+  </data>
+  <data name="PasswordsDoNotMatchDescr" xml:space="preserve">
+    <value>Please check that both password fields have the same password.</value>
+  </data>
+  <data name="PasswordsDoNotMatchTitle" xml:space="preserve">
+    <value>Passwords do not match</value>
+  </data>
+  <data name="PasswordText" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PhoneChangeSuccessfulText" xml:space="preserve">
+    <value>Phone number changed.</value>
+  </data>
+  <data name="PhoneText" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="ProfileText" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="RecordVoicePrivacy" xml:space="preserve">
+    <value>This app is using voice recognition for voice commands and is using the internet to send data back to the provider of the voice recognition service. Doing so, companies like Google &amp; Microsoft receive data to interpret your commands. These companies may store data received to help facilitate improvements of their voice recognition services. We don't save, hear or use your voice samples in any way.</value>
+  </data>
+  <data name="REGISTER" xml:space="preserve">
+    <value>REGISTER</value>
+  </data>
+  <data name="ScheduleText" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="SelectPictureText" xml:space="preserve">
+    <value>Select picture</value>
+  </data>
+  <data name="SignUpQuestion" xml:space="preserve">
+    <value>Don't have an account?</value>
+  </data>
+  <data name="SignUpText" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="SocialDescr" xml:space="preserve">
+    <value>Or log in using social media</value>
+  </data>
+  <data name="StartTimeText" xml:space="preserve">
+    <value>Start Time</value>
+  </data>
+  <data name="SubmitText" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="TimeText" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="TrainerIsText" xml:space="preserve">
+    <value>Trainer Is</value>
+  </data>
+  <data name="TypeText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="UploadedText" xml:space="preserve">
+    <value>Uploaded</value>
+  </data>
+  <data name="UploadSuccessfulText" xml:space="preserve">
+    <value>Image uploaded.</value>
+  </data>
+  <data name="UploadText" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="UserCanTakePlaceInEventText" xml:space="preserve">
+    <value>You can take place in this event</value>
+  </data>
+  <data name="UserHasBookedEventText" xml:space="preserve">
+    <value>You have booked this event</value>
+  </data>
+  <data name="UsernameInUseDescr" xml:space="preserve">
+    <value>The username you have selected is already in use. Please another username.</value>
+  </data>
+  <data name="UsernameInUseTitle" xml:space="preserve">
+    <value>Username is in use</value>
+  </data>
+  <data name="UsernameText" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="UserNotFoundDescr" xml:space="preserve">
+    <value>Username or/and password is wrong</value>
+  </data>
+  <data name="UserNotFoundTitle" xml:space="preserve">
+    <value>User Not Found</value>
+  </data>
+  <data name="UsersThatHaveBookedText" xml:space="preserve">
+    <value>The following users have booked this event</value>
+  </data>
+  <data name="ValidEmailText" xml:space="preserve">
+    <value>Please enter a valid e-mail</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="WeekText" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="WithdrawText" xml:space="preserve">
+    <value>Withdraw</value>
+  </data>
+</root>

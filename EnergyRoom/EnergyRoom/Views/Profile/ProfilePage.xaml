@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EnergyRoom.Views.Profile.ProfilePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:converter="clr-namespace:EnergyRoom.Converters"
+    xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
+    xmlns:resources="clr-namespace:EnergyRoom.Resources"
+    Title="{x:Static resources:AppResources.ProfileText}"
+    BackgroundColor="{DynamicResource Gray-White}"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:ByteArrayToImageSourceConverter x:Key="bisc" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout Spacing="0">
+
+                <!--  Title  -->
+                <!--<Grid Padding="10,20,10,10">
+                    <Label
+                        Grid.ColumnSpan="2"
+                        FontFamily="{StaticResource Montserrat-Medium}"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource CommonProfileLabelStyle}"
+                        Text="Profile" />
+                </Grid>-->
+
+                <BoxView Style="{StaticResource SeparatorStyle}" />
+
+                <sfPopup:SfPopupLayout x:Name="popUpLayoutGetPhoto" IsOpen="{Binding DisplayGetPhotoPopup}">
+                    <sfPopup:SfPopupLayout.PopupView>
+                        <sfPopup:PopupView AppearanceMode="TwoButton"
+                                        AnimationMode="Zoom"
+                                        AcceptButtonText="{x:Static resources:AppResources.CameraText}"
+                                        DeclineButtonText="{x:Static resources:AppResources.CollectionText}"
+                                        AcceptCommand="{Binding GetPhotoFromCameraCommand}"
+                                        DeclineCommand="{Binding GetPhotoFromDeviceCommand}"
+                                        HeaderTitle="{x:Static resources:AppResources.ChangePhotoTitleText}">
+                            <sfPopup:PopupView.PopupStyle>
+                                <sfPopup:PopupStyle FooterBackgroundColor="LightGray"
+                                        AcceptButtonBackgroundColor ="#35c659"
+                                        AcceptButtonTextColor="White"
+                                        DeclineButtonBackgroundColor="DimGray"
+                                        DeclineButtonTextColor="White"
+                                        />
+                            </sfPopup:PopupView.PopupStyle>
+                            <sfPopup:PopupView.ContentTemplate>
+                                <DataTemplate>
+                                    <Label Text="{x:Static resources:AppResources.ChangePhotoDescrText}" Padding="10" HorizontalTextAlignment="Start"/>
+                                </DataTemplate>
+                            </sfPopup:PopupView.ContentTemplate>
+                        </sfPopup:PopupView>
+                    </sfPopup:SfPopupLayout.PopupView>
+                </sfPopup:SfPopupLayout>
+
+                <sfPopup:SfPopupLayout x:Name="popUpLayoutChangePhone" IsOpen="{Binding DisplayChangePhonePopup}">
+                    <sfPopup:SfPopupLayout.PopupView>
+                        <sfPopup:PopupView AppearanceMode="TwoButton"
+                                        AnimationMode="Zoom"
+                                        AcceptButtonText="{x:Static resources:AppResources.ChangeText}"
+                                        DeclineButtonText="{x:Static resources:AppResources.CancelText}"
+                                        AcceptCommand="{Binding ChangePhoneCommand}"
+                                        HeaderTitle="{x:Static resources:AppResources.ChangePhoneText}">
+                            <sfPopup:PopupView.PopupStyle>
+                                <sfPopup:PopupStyle FooterBackgroundColor="LightGray"
+                                        AcceptButtonBackgroundColor ="#35c659"
+                                        AcceptButtonTextColor="White"
+                                        DeclineButtonBackgroundColor="DimGray"
+                                        DeclineButtonTextColor="White"
+                                        />
+                            </sfPopup:PopupView.PopupStyle>
+                            <sfPopup:PopupView.ContentTemplate>
+                                <DataTemplate>
+                                    <StackLayout Margin="0,20,0,0">
+                                        <Grid
+                                            x:Name="PhoneGrid"
+                                            Padding="16"
+                                            ColumnSpacing="16">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Label
+                                                Grid.Column="0"
+                                                Style="{StaticResource CommonProfileIconLabelStyle}"
+                                                Text="{StaticResource VoiceCall}" />
+                                            <Entry
+                                                Grid.Column="1"
+                                                x:Name="NewPhone"
+                                                VerticalOptions="Start"
+                                                HorizontalOptions="FillAndExpand"
+                                                Keyboard="Numeric"
+                                                Text="{Binding NewPhone}">
+                                            </Entry>
+                                        </Grid>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </sfPopup:PopupView.ContentTemplate>
+                        </sfPopup:PopupView>
+                    </sfPopup:SfPopupLayout.PopupView>
+                </sfPopup:SfPopupLayout>
+
+                <sfPopup:SfPopupLayout x:Name="popUpLayoutChangeEmail" IsOpen="{Binding DisplayChangeEmailPopup}">
+                    <sfPopup:SfPopupLayout.PopupView>
+                        <sfPopup:PopupView AppearanceMode="TwoButton"
+                                        AnimationMode="Zoom"
+                                        AcceptButtonText="{x:Static resources:AppResources.ChangeText}"
+                                        DeclineButtonText="{x:Static resources:AppResources.CancelText}"
+                                        AcceptCommand="{Binding ChangeEmailCommand}"
+                                        HeaderTitle="{x:Static resources:AppResources.ChangeEmailText}">
+                            <sfPopup:PopupView.PopupStyle>
+                                <sfPopup:PopupStyle FooterBackgroundColor="LightGray"
+                                        AcceptButtonBackgroundColor ="#35c659"
+                                        AcceptButtonTextColor="White"
+                                        DeclineButtonBackgroundColor="DimGray"
+                                        DeclineButtonTextColor="White"
+                                        />
+                            </sfPopup:PopupView.PopupStyle>
+                            <sfPopup:PopupView.ContentTemplate>
+                                <DataTemplate>
+                                    <StackLayout Margin="0,20,0,0">
+                                        <Grid
+                                            x:Name="EmailGrid"
+                                            Padding="16"
+                                            ColumnSpacing="16">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Label
+                                                Grid.Column="0"
+                                                Style="{StaticResource CommonProfileIconLabelStyle}"
+                                                Text="{StaticResource Mail}" />
+                                            <Entry
+                                                Grid.Column="1"
+                                                x:Name="NewEmail"
+                                                VerticalOptions="Start"
+                                                HorizontalOptions="FillAndExpand"
+                                                Keyboard="Email"
+                                                Text="{Binding NewEmail}">
+                                            </Entry>
+                                        </Grid>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </sfPopup:PopupView.ContentTemplate>
+                        </sfPopup:PopupView>
+                    </sfPopup:SfPopupLayout.PopupView>
+                </sfPopup:SfPopupLayout>
+
+                <!--  Profile image with edit label  -->
+                <buttons:SfButton
+                    Margin="0,10,0,0"
+                    BackgroundColor="Transparent"
+                    BorderColor="{DynamicResource Gray-White}"
+                    BorderWidth="2"
+                    Command="{Binding EditCommand}"
+                    CornerRadius="60"
+                    HorizontalOptions="Center"
+                    WidthRequest="120">
+                    <buttons:SfButton.Content>
+                        <Grid HeightRequest="120" WidthRequest="120">
+                            <Image
+                                x:Name="ProfileImage"
+                                Source="{Binding UserImage, Converter={StaticResource bisc}}"
+                                Aspect="AspectFill"
+                                BackgroundColor="{DynamicResource Gray-200}" />
+                            <BoxView
+                                BackgroundColor="{DynamicResource Gray-Black}"
+                                HeightRequest="32"
+                                Opacity="0.6"
+                                VerticalOptions="End" />
+                            <Label
+                                FontFamily="{StaticResource Montserrat-SemiBold}"
+                                FontSize="12"
+                                HeightRequest="32"
+                                HorizontalTextAlignment="Center"
+                                Text="{x:Static resources:AppResources.ChangeText}"
+                                TextColor="{DynamicResource Gray-White}"
+                                VerticalOptions="End"
+                                VerticalTextAlignment="Center" />
+                        </Grid>
+                    </buttons:SfButton.Content>
+                </buttons:SfButton>
+
+                <!--  Profile Name  -->
+                <Label
+                    Margin="0,10,0,10"
+                    FontFamily="{StaticResource Montserrat-Bold}"
+                    FontSize="16"
+                    HorizontalOptions="Center"
+                    Text="{Binding Name}"
+                    TextColor="{DynamicResource Gray-900}"
+                    VerticalOptions="Center" />
+
+                <!--  Grid for phone label and navigation icon  -->
+                <Grid
+                    x:Name="PhoneGrid"
+                    Padding="16"
+                    ColumnSpacing="16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PhoneCommand}" CommandParameter="{x:Reference PhoneGrid}" />
+                    </Grid.GestureRecognizers>
+
+                    <Label
+                        Grid.Column="0"
+                        Style="{StaticResource CommonProfileIconLabelStyle}"
+                        Text="{StaticResource VoiceCall}" />
+                    
+                    <Label
+                        Grid.Column="1"
+                        Style="{StaticResource CommonProfileLabelStyle}"
+                        Text="{Binding NewPhone}" />
+                </Grid>
+
+                <BoxView Style="{StaticResource SeparatorStyle}" />
+
+                <!--  Grid for mail label and icon  -->
+                <Grid
+                    x:Name="EmailGrid"
+                    Padding="16"
+                    ColumnSpacing="16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding EmailCommand}" CommandParameter="{x:Reference EmailGrid}" />
+                    </Grid.GestureRecognizers>
+
+                    <Label
+                        Grid.Column="0"
+                        Style="{StaticResource CommonProfileIconLabelStyle}"
+                        Text="{StaticResource Mail}" />
+
+                    <Label
+                        Grid.Column="1"
+                        Style="{StaticResource CommonProfileLabelStyle}"
+                        Text="{Binding NewEmail}" />
+                </Grid>
+
+                <BoxView Style="{StaticResource SeparatorStyle}" />
+
+                <!--  Grid for notification label and navigation icon  -->
+                <!--<Grid
+                    x:Name="NotificationGrid"
+                    Padding="16"
+                    ColumnSpacing="16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NotificationCommand}" CommandParameter="{x:Reference NotificationGrid}" />
+                    </Grid.GestureRecognizers>
+
+                    <Label
+                        Grid.Column="0"
+                        Style="{StaticResource CommonProfileIconLabelStyle}"
+                        Text="{StaticResource Notification}" />
+
+                    <Label
+                        Grid.Column="1"
+                        Style="{StaticResource CommonProfileLabelStyle}"
+                        Text="Notifications" />
+
+                    <Label
+                        Grid.Column="2"
+                        HorizontalOptions="End"
+                        Style="{StaticResource CommonProfileIconLabelStyle}"
+                        Text="{StaticResource Next}" />
+                </Grid>-->
+
+                <BoxView Style="{StaticResource SeparatorStyle}" />
+
+                <Button
+                    Margin="0,10,0,0"
+                    Text="{x:Static resources:AppResources.LogOutText}"
+                    Command="{Binding ExecuteLogoutCommand}"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White" />
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

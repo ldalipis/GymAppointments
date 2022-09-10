@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="EnergyRoom.Views.Notification.Styles"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+
+    <Color x:Key="TappedBackgroundColor">#eaeaea</Color>
+    <Color x:Key="Transparent">Transparent</Color>
+    <Color x:Key="Link">#567cd7</Color>
+    <x:String x:Key="Back">&#xe709;</x:String>
+    <x:String x:Key="More">&#xe719;</x:String>
+    <x:String x:Key="New Message">&#xe720;</x:String>
+    <x:String x:Key="Delivered">&#xe741;</x:String>
+    <x:String x:Key="Offer">&#xe736;</x:String>
+    <x:String x:Key="FlashSale">&#xe743;</x:String>
+    <x:String x:Key="Arrived">&#xe740;</x:String>
+
+    <!--  Common style for icon buttons  -->
+    <Style x:Key="IconButtonStyle" TargetType="buttons:SfButton">
+        <Setter Property="TextColor" Value="{DynamicResource Gray-600}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Transparent}" />
+        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HeightRequest" Value="40" />
+        <Setter Property="WidthRequest" Value="40" />
+    </Style>
+
+    <!-- Common style for seperators -->
+    <Style x:Key="SeparatorStyle" TargetType="BoxView">
+        <Setter Property="HeightRequest" Value="1" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-200}" />
+    </Style>
+
+    <!--  Style for version label  -->
+    <Style x:Key="VersionLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray-700}" />
+        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Medium}" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="LineHeight" Value="{OnPlatform Default=1.25, iOS=-1}"/>
+    </Style>
+
+    <!--  Style for header label  -->
+    <Style x:Key="HeaderLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray-900}" />
+        <Setter Property="FontFamily" Value="{StaticResource Montserrat-SemiBold}" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="LineHeight" Value="1.25"/>
+        <Setter Property="Margin" Value="0,16,0,8"/>
+    </Style>
+
+    <!--  Style for description label  -->
+    <Style x:Key="DescriptionLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray-700}" />
+        <Setter Property="FontFamily" Value="{StaticResource Montserrat-Medium}" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="LineHeight" Value="{OnPlatform Default=1.25}"/>
+    </Style>
+
+    <!--  Style for Images  -->
+    <Style x:Key="AboutUsImageStyle" TargetType="Image">
+        <Setter Property="HeightRequest" Value="64" />
+        <Setter Property="WidthRequest" Value="64" />
+    </Style>
+</ResourceDictionary>

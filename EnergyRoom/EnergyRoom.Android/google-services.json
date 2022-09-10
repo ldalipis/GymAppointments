@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "44903468109",
+    "firebase_url": "https://energyroomapp.firebaseio.com",
+    "project_id": "energyroomapp",
+    "storage_bucket": "energyroomapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44903468109:android:49c3cb33e8ce875c206004",
+        "android_client_info": {
+          "package_name": "gr.ldalipis.energyroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "44903468109-49omp1buh70ikcqr3n3svsu5c1qqvcsp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSdg0h-eDNHZBvK9qL5b2fGVv1aCOZ0hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "44903468109-49omp1buh70ikcqr3n3svsu5c1qqvcsp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="facebook_app_name">EnergyRoom</string>
+    <string name="facebook_app_id">167013488505537</string>
+    <string name="fb_login_protocol_scheme">fb167013488505537</string>
+</resources>
